@@ -1,13 +1,11 @@
 package com.example.simpleecommerceapp.ui.home.adapter
 
-import android.content.ContentValues
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.simpleecommerceapp.R
-import com.example.simpleecommerceapp.models.DataItem
+import com.example.simpleecommerceapp.models.ListProductPromo.DataItem
 import com.example.simpleecommerceapp.utils.Constants
 import com.smarteist.autoimageslider.SliderViewAdapter
 import kotlinx.android.synthetic.main.item_image_slider.view.*

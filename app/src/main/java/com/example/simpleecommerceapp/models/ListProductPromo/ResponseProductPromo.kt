@@ -1,6 +1,5 @@
-package com.example.simpleecommerceapp.models
+package com.example.simpleecommerceapp.models.ListProductPromo
 
-import com.example.simpleecommerceapp.models.DataItem
 import com.google.gson.annotations.SerializedName
 
 data class ResponseProductPromo(

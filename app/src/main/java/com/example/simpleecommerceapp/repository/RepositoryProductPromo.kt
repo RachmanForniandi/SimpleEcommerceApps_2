@@ -1,6 +1,6 @@
 package com.example.simpleecommerceapp.repository
 
-import com.example.simpleecommerceapp.models.ResponseProductPromo
+import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.network.NetworkConfig
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

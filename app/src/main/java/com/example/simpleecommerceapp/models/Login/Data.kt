@@ -1,4 +1,4 @@
-package com.example.simpleecommerceapp.models.login
+package com.example.simpleecommerceapp.models.Login
 
 
 import com.google.gson.annotations.SerializedName

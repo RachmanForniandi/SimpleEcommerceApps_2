@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.simpleecommerceapp.R
-import com.example.simpleecommerceapp.models.ResponseProductPromo
+import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.ui.home.adapter.SliderAdapter
 import kotlinx.android.synthetic.main.home_fragment.*
 

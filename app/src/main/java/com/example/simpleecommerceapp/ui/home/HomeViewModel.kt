@@ -2,11 +2,8 @@ package com.example.simpleecommerceapp.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.simpleecommerceapp.models.ResponseProductPromo
-import com.example.simpleecommerceapp.models.login.ResponseLogin
+import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.repository.RepositoryProductPromo
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 class HomeViewModel : ViewModel() {
     // TODO: Implement the ViewModel
