@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.simpleecommerceapp.HomeActivity
 import com.example.simpleecommerceapp.R
-import com.example.simpleecommerceapp.models.login.ResponseLogin
+import com.example.simpleecommerceapp.models.Login.ResponseLogin
 import com.example.simpleecommerceapp.utils.SessionManager
 import com.example.simpleecommerceapp.utils.hide
 import com.example.simpleecommerceapp.utils.show
@@ -21,7 +21,6 @@ import org.jetbrains.anko.newTask
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.alert
 import org.jetbrains.anko.support.v4.intentFor
-import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.yesButton
 
 class LoginFragment : Fragment() {

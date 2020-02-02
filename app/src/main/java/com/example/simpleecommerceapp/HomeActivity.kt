@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import com.example.simpleecommerceapp.ui.home.HomeFragment
 import com.example.simpleecommerceapp.ui.home.fragments.CartFragment
 import com.example.simpleecommerceapp.ui.home.fragments.ProfileFragment
+import com.example.simpleecommerceapp.ui.search.SearchActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.home_activity.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
+import org.jetbrains.anko.startActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,6 +26,11 @@ class HomeActivity : AppCompatActivity() {
 
         val fragment = HomeFragment()
         addFragment(fragment)
+
+        ivSearch.onClick {
+            startActivity<SearchActivity>()
+        }
+
     }
 
 

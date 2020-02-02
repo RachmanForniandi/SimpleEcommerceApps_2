@@ -2,7 +2,7 @@ package com.example.simpleecommerceapp.ui.login
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.simpleecommerceapp.models.login.ResponseLogin
+import com.example.simpleecommerceapp.models.Login.ResponseLogin
 import com.example.simpleecommerceapp.repository.RepositoryUser
 
 class LoginViewModel : ViewModel() {
