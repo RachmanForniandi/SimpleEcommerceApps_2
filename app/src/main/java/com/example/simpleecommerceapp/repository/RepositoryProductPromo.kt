@@ -1,5 +1,6 @@
 package com.example.simpleecommerceapp.repository
 
+import com.example.simpleecommerceapp.models.ListProduct.ResponseListProduct
 import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.network.NetworkConfig
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -24,6 +25,28 @@ class RepositoryProductPromo {
                     errorHandler(it)
                 })
         )
+    }
+
+    //get search product
+    fun searchForProduct(
+        product:String,
+        responseHandler:(ResponseListProduct)->Unit,
+        errorHandler: (Throwable)->Unit){
+        compositeProduct.add(
+            apiProduct.search(product)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    responseHandler(it)
+                },{
+                    errorHandler(it)
+                })
+        )
+    }
+
+
+    fun onClear(){
+        compositeProduct.clear()
     }
 
 }

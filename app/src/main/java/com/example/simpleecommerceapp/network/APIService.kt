@@ -5,6 +5,7 @@ import com.example.simpleecommerceapp.models.Cart.ResponseListItemCart
 import com.example.simpleecommerceapp.models.ListProduct.ResponseListProduct
 import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.models.Login.ResponseLogin
+import com.example.simpleecommerceapp.models.Register.ResponseRegister
 import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.Field
@@ -25,7 +26,7 @@ interface APIService {
                     @Field("password")password:String,
                     @Field("fullname") fullname: String,
                     @Field("nohp") nohp: String,
-                    @Field("alamat") alamat: String):Single<ResponseLogin>
+                    @Field("alamat") alamat: String):Single<ResponseRegister>
 
 
     @FormUrlEncoded
