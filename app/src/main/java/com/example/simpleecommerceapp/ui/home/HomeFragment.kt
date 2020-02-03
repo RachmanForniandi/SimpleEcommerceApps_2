@@ -2,6 +2,7 @@ package com.example.simpleecommerceapp.ui.home
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,8 @@ import com.example.simpleecommerceapp.ui.home.adapter.ListCategoryAdapter
 import com.example.simpleecommerceapp.ui.home.adapter.ListProductAdapter
 import com.example.simpleecommerceapp.ui.home.adapter.SliderAdapter
 import com.example.simpleecommerceapp.ui.productByCategory.ProductByCategoryActivity
+import com.example.simpleecommerceapp.utils.hide
+import com.example.simpleecommerceapp.utils.show
 import kotlinx.android.synthetic.main.home_fragment.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -51,6 +54,22 @@ class HomeFragment : Fragment() {
         viewModel.responseProductPromo.observe(this, Observer { showImageSlider(it) })
         viewModel.responseProduct.observe(this, Observer { showItemProduct(it) })
         viewModel.responseProductCategory.observe(this, Observer { showListCategory(it) })
+        viewModel.isLoadingProduct.observe(this, Observer { showLoadingOfProduct(it) })
+        viewModel.errorApiProduct.observe(this, Observer {  showError(it)})
+    }
+
+    private fun showLoadingOfProduct(it:Boolean?){
+        if (it ?: false){
+            pbKategori.show()
+            pbProduk.show()
+        }else{
+            pbKategori.hide()
+            pbProduk.hide()
+        }
+    }
+
+    private fun showError(it: Throwable?) {
+        Log.d("ERROR",it?.message ?: "")
     }
 
     private fun showListCategory(it: ResponseCategory?) {
