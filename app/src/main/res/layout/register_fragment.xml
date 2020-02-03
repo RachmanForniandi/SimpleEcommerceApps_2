@@ -81,7 +81,7 @@
                 android:visibility="gone" />
 
 
-        <androidx.cardview.widget.CardView
+        <!--<androidx.cardview.widget.CardView
                 android:id="@+id/cvRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,17 @@
                     android:text="Register"
                     android:textColor="#FFF"
                     android:textSize="14sp" />
-        </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>-->
+
+        <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Register"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                android:background="@drawable/bg_button"/>
 
     </LinearLayout>
 

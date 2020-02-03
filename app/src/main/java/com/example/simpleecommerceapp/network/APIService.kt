@@ -2,6 +2,7 @@ package com.example.simpleecommerceapp.network
 
 import com.example.simpleecommerceapp.models.AddOrDeleteItemCart.ResponseAddItemToCart
 import com.example.simpleecommerceapp.models.Cart.ResponseListItemCart
+import com.example.simpleecommerceapp.models.Category.ResponseCategory
 import com.example.simpleecommerceapp.models.ListProduct.ResponseListProduct
 import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
 import com.example.simpleecommerceapp.models.Login.ResponseLogin
@@ -36,7 +37,7 @@ interface APIService {
     @FormUrlEncoded
     @POST("getProdukByKategori")
     fun getProductByCategory
-                (@Field("id_kategori") id_kategori: String): Observable<ResponseListProduct>
+                (@Field("id_kategori") id_kategori: String): Observable<ResponseCategory>
 
     @GET("getProdukPromo")
     fun getProductPromo():Observable<ResponseProductPromo>
@@ -46,6 +47,9 @@ interface APIService {
 
     @GET("getKeranjang")
     fun getItemCart(): Observable<ResponseListItemCart>
+
+    @GET("getKategori")
+    fun getCategory():Observable<ResponseCategory>
 
     @FormUrlEncoded
     @POST("deleteKeranjang")
