@@ -1,4 +1,4 @@
-package com.example.simpleecommerceapp.ui.home.fragments
+package com.example.simpleecommerceapp.ui.home
 
 
 import android.os.Bundle

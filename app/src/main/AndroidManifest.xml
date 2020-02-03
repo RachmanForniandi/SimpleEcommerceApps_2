@@ -12,9 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true">
-        <activity android:name=".ui.register.RegisterActivity">
-        </activity>
-        <activity android:name=".ui.search.SearchActivity">
+        <activity android:name=".ui.detailProduct.DetailProductActivity">
         </activity>
         <activity android:name=".SplashscreenActivity">
             <intent-filter>
@@ -25,7 +23,15 @@
         </activity>
         <activity android:name=".ui.login.LoginActivity">
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".ui.register.RegisterActivity">
+        </activity>
+        <activity android:name=".ui.home.HomeActivity">
+        </activity>
+        <activity android:name=".ui.productByCategory.ProductByCategoryActivity">
+        </activity>
+        <activity android:name=".ui.cart.CartActivity">
+        </activity>
+        <activity android:name=".ui.search.SearchActivity">
         </activity>
     </application>
 

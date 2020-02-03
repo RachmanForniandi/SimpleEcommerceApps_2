@@ -1,11 +1,10 @@
-package com.example.simpleecommerceapp
+package com.example.simpleecommerceapp.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.simpleecommerceapp.ui.home.HomeFragment
-import com.example.simpleecommerceapp.ui.home.fragments.CartFragment
-import com.example.simpleecommerceapp.ui.home.fragments.ProfileFragment
+import com.example.simpleecommerceapp.R
+import com.example.simpleecommerceapp.ui.cart.CartFragment
 import com.example.simpleecommerceapp.ui.search.SearchActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.home_activity.*

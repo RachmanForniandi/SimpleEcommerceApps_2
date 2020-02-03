@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import com.example.simpleecommerceapp.HomeActivity
+import com.example.simpleecommerceapp.ui.home.HomeActivity
 import com.example.simpleecommerceapp.R
 import com.example.simpleecommerceapp.models.Login.ResponseLogin
 import com.example.simpleecommerceapp.utils.SessionManager
@@ -95,7 +95,7 @@ class LoginFragment : Fragment() {
             session?.idUser =it?.data?.id
             startActivity(intentFor<HomeActivity>().clearTop().newTask().clearTask())
 
-            val intent = Intent(activity,HomeActivity::class.java)
+            val intent = Intent(activity, HomeActivity::class.java)
 
         }else{
             alert("username or Password invalid","Confirmation"){
