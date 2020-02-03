@@ -81,7 +81,7 @@ class RepositoryProduct {
     //get product by category
     fun showProductByCategory(
         id_category:String,
-        responseHandler:(ResponseCategory)->Unit,
+        responseHandler:(ResponseListProduct)->Unit,
         errorHandler: (Throwable)->Unit){
         compositeProduct.add(
             apiProduct.getProductByCategory(id_category)

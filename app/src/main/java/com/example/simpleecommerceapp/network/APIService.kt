@@ -37,7 +37,7 @@ interface APIService {
     @FormUrlEncoded
     @POST("getProdukByKategori")
     fun getProductByCategory
-                (@Field("id_kategori") id_kategori: String): Observable<ResponseCategory>
+                (@Field("id_kategori") id_kategori: String): Observable<ResponseListProduct>
 
     @GET("getProdukPromo")
     fun getProductPromo():Observable<ResponseProductPromo>

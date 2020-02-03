@@ -3,6 +3,7 @@ package com.example.simpleecommerceapp.ui.productByCategory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.simpleecommerceapp.R
+import kotlinx.android.synthetic.main.product_by_category_activity.*
 
 class ProductByCategoryActivity : AppCompatActivity() {
 
@@ -14,6 +15,7 @@ class ProductByCategoryActivity : AppCompatActivity() {
                 .replace(R.id.container, ProductByCategoryFragment.newInstance())
                 .commitNow()
         }
+        titleBar.text = "Kategori "+intent?.getStringExtra("kategori")
     }
 
 }
