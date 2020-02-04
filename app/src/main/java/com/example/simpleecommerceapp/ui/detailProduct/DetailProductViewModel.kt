@@ -7,14 +7,18 @@ import com.example.simpleecommerceapp.repository.RepositoryProduct
 
 class DetailProductViewModel : ViewModel() {
 
-    private val repositoryCart = RepositoryProduct()
+    private val repository = RepositoryProduct()
 
     var responseAddToCart = MutableLiveData<ResponseAddItemToCart>()
 
     var errorApiCart = MutableLiveData<Throwable>()
 
     fun addToCart(idUser:String, idProduct:String){
+        repository.addItemOnCart(idUser,idProduct,{
+            responseAddToCart.value = it
+        },{
+            errorApiCart.value = it
+        })
 
-        
     }
 }

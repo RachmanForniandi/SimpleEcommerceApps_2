@@ -18,7 +18,9 @@ class ProductByCategoryViewModel : ViewModel() {
     var errorApiProductByCategory = MutableLiveData<Throwable>()
     var isLoadingProductByCategory = MutableLiveData<Boolean>()
 
+
     fun showProductByCategory(idCategory: String) {
+
         isLoadingProductByCategory.value = true
         repositoryProductByCategory.showProductByCategory(idCategory,{
             responseProductByCategory.value = it
