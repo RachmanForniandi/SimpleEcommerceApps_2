@@ -12,10 +12,10 @@ class ProductByCategoryActivity : AppCompatActivity() {
         setContentView(R.layout.product_by_category_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, ProductByCategoryFragment.newInstance())
+                .replace(R.id.containerProductByCategory, ProductByCategoryFragment.newInstance())
                 .commitNow()
         }
-        titleBar.text = "Kategori "+intent?.getStringExtra("kategori")
+        titleBar.text = "Kategori "+intent?.getStringExtra("category")
     }
 
 }
