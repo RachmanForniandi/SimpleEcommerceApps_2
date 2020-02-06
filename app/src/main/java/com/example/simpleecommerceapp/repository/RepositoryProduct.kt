@@ -1,6 +1,7 @@
 package com.example.simpleecommerceapp.repository
 
 import com.example.simpleecommerceapp.models.AddOrDeleteItemCart.ResponseAddItemToCart
+import com.example.simpleecommerceapp.models.Cart.ResponseListItemCart
 import com.example.simpleecommerceapp.models.Category.ResponseCategory
 import com.example.simpleecommerceapp.models.ListProduct.ResponseListProduct
 import com.example.simpleecommerceapp.models.ListProductPromo.ResponseProductPromo
@@ -9,7 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class RepositoryProduct {
+class  RepositoryProduct {
     private val apiProduct = NetworkConfig.useService()
     private val compositeProduct = CompositeDisposable()
 
@@ -78,6 +79,24 @@ class RepositoryProduct {
                 })
         )
     }
+
+    fun getListItemCart(
+        responseHandler:(ResponseListItemCart)->Unit,
+        errorHandler: (Throwable)->Unit
+    ){
+        compositeProduct.add(
+            apiProduct.getItemCart()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    responseHandler(it)
+                },{
+                    errorHandler(it)
+                })
+        )
+    }
+
+
 
     //get product by category
     fun showProductByCategory(
