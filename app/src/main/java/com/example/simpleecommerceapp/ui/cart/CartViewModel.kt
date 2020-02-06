@@ -35,6 +35,7 @@ class CartViewModel : ViewModel() {
         repositorycart.deleteItemOnCart(id,
             {
                 responseDeleteItemCart.value = it
+                showItemCart()
                 isLoadingCart.value = false
             },{
                 errorApiCart.value = it
