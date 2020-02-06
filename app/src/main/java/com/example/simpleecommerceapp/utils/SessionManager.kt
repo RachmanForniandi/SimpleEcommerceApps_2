@@ -42,4 +42,25 @@ class SessionManager (val context:Context){
         editor.putString("iduser",value)
         editor.commit()
     }
+
+    var fullname: String?
+        get() = pref.getString("fullname", "")
+        set(value) {
+            editor.putString("fullname", value)
+            editor.commit()
+        }
+
+    var nohp: String?
+        get() = pref.getString("nohp", "")
+        set(value) {
+            editor.putString("nohp", value)
+            editor.commit()
+        }
+
+    var alamat: String?
+        get() = pref.getString("alamat", "")
+        set(value) {
+            editor.putString("alamat", value)
+            editor.commit()
+        }
 }

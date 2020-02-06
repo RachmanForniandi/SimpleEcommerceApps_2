@@ -93,6 +93,9 @@ class LoginFragment : Fragment() {
             }.show()*/
             session?.createLoginSession("1")
             session?.idUser =it?.data?.id
+            session?.fullname = it?.data?.fullname
+            session?.nohp = it?.data?.nohp
+            session?.alamat = it?.data?.alamat
             startActivity(intentFor<HomeActivity>().clearTop().newTask().clearTask())
 
             val intent = Intent(activity, HomeActivity::class.java)
